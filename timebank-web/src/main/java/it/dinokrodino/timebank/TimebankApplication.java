@@ -1,4 +1,4 @@
-package co.uk.dinokrodino.timebank;
+package it.dinokrodino.timebank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
