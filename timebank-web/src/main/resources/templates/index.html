@@ -1,0 +1,34 @@
+<!--
+  ~ Created by DC on 6/27/2019
+  -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Recipe Home</title>
+</head>
+<body>
+<h1>Timebank</h1>
+<h1 th:text="'List of Users'">Natural Thymeleaf</h1>
+<!--/*@thymesVar id="owner" type="guru.springframework.sfgpetclinic.model.Owner"*/-->
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 150px;">Id</th>
+        <th style="width: 150px;">Username</th>
+        <th style="width: 150px;">credit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.credits}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
