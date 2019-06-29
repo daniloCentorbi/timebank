@@ -8,7 +8,7 @@ import it.dinokrodino.timebank.model.User;
 
 import java.util.Set;
 
-public interface   UserService {
+public interface UserService {
     User findById(Long id);
     User findByUsername(String username);
     User save(User user);

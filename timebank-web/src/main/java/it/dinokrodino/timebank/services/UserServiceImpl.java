@@ -6,11 +6,13 @@ package it.dinokrodino.timebank.services;
 
 import it.dinokrodino.timebank.model.User;
 import it.dinokrodino.timebank.repositories.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -37,6 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Set<User> findAll() {
+        log.debug("findAll");
         Set<User> userSet = new HashSet<>();
         userRepository.findAll().iterator().forEachRemaining(userSet::add);
         return userSet;
